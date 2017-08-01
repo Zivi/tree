@@ -1,0 +1,46 @@
+.App {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #DCDCDC;
+  position: relative;
+}
+
+#title {
+  background-color: #F5F5F5;
+  margin: 0px;
+  height: 40px;
+  padding: 10px;
+  font-weight: normal;
+  position: relative;
+}
+
+.close-window {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+.label {
+  height: 40px;
+  color: #C8C8C8;
+  padding-top: 10px;
+  padding-left: 18px;
+  border: 1px solid #DCDCDC;
+}
+
+.tree-container {
+  color: #666666;
+}
+
+.folder-toggle {
+  position: absolute;
+}
+
+.folder-icon {
+  position: absolute;
+  left: 20px;
+}
+.folder-text {
+  padding-left: 40px;
+}

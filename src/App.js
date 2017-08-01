@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.css';
+import './styles/sprite.css';
 
 class App extends Component {
 
@@ -24,26 +25,34 @@ class App extends Component {
     })
   }
 
-  checkChildType(folder) {
+  checkChildType(folder, paddingSize) {
+    const divStyle = {
+      'padding-left': '10px;'
+    }
     if (folder.children) {
       return (
-        <div className={folder.type + ' ' + (folder.private ? 'private' : '')}>
-          {folder.name}
-          <div>
-            {folder.children.map(child => this.checkChildType(child))}
-          </div>
+        <div style={divStyle}>
+          <div className="folder-toggle expand"></div>
+          <div className={folder.type + ' folder-icon ' + (folder.private ? 'hidden-folder' : '')} ></div>
+          <div className="folder-text">{folder.name}</div>
+          {folder.children.map(child => this.checkChildType(child))}
         </div>
       )
     }
-    return (<div className={folder.type}>{folder.name}</div>);
+    return (
+      <div className="tree-item">
+        <div className={folder.type + ' folder-icon'} />
+        <div className="folder-text">{folder.name}</div>
+      </div>
+    );
   }
 
   render() {
     return (
       <div className="App">
-        <h1 id="title">Title<span className="close">x</span></h1>
+        <h1 id="title">Title<div className="close close-window" /></h1>
         <div className="label">Label</div>
-        <div>{this.state.fileData.map(folder =>
+        <div className="tree-container">{this.state.fileData.map(folder =>
           this.checkChildType(folder)
         )}</div>
       </div>

@@ -1,0 +1,55 @@
+.folder, .hidden-folder, .file, .close, .expand, .collapse, .expand-hover, .collapse-hover {
+  background-image: url('../icon-sprite.png');
+  background-repeat: no-repeat;
+}
+
+.folder {
+  height: 15px;
+  width: 14px;
+  background-position: 0px 0px;
+}
+
+.hidden-folder {
+  height: 15px;
+  width: 14px;
+  background-position: -14px 0px;
+}
+
+.file {
+  height: 15px;
+  width: 13px;
+  background-position: -28px 0px;
+}
+
+.close {
+  height: 15px;
+  width: 13px;
+  background-position: -42px 0px;
+}
+
+.expand {
+  height: 12px;
+  width: 11px;
+  opacity: 0.6;
+  background-position: -57px 0px;
+}
+.collapse {
+  height: 13px;
+  width: 11px;
+  opacity: 0.6;
+  background-position: -71px 0px;
+}
+
+.expand-hover {
+  height: 13px;
+  width: 11px;
+  opacity: 0.6;
+  background-position: -85px 0px;
+}
+
+.collapse-hover {
+  height: 13px;
+  width: 11px;
+  opacity: 0.6;
+  background-position: -99px 0px;
+}
